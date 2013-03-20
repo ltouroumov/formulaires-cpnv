@@ -107,7 +107,7 @@
 
 \subsection*{General}
 
-\lipsum[1]
+Texte d'infos du chapitre ...
 
 %% \textbf{Unités} \\
 %% \begin{math}
@@ -133,10 +133,10 @@ Mouvement d'un corps sur une trajéctoire réctiligne.
 	$$
 \nextcol
 	\begin{tabular}{rcl}
-		\formula{$v$}{Vitesse} \\
-		\formula{$x$}{Position} \\
-		\formula{$x_0$}{Position initiale} \\
-		\formula{$t$}{Temps} \\
+		\formula{$v$}{Vitesse [$m/s$]} \\
+		\formula{$x$}{Position [$m$]} \\
+		\formula{$x_0$}{Position initiale [$m$]} \\
+		\formula{$t$}{Temps [$s$]} \\
 	\end{tabular}
 \end{twocols}
 \subsubsection*{Uniformément Accéléré (MRUA)}
@@ -152,13 +152,13 @@ Mouvement d'un corps sur une trajéctoire réctiligne.
 	$$
 \nextcol
 	\begin{tabular}{rcl}
-		\formula{$a$}{Accélération} \\
-		\formula{$v_0$}{Vitesse initiale} \\
+		\formula{$a$}{Accélération [$m/s^2$]} \\
+		\formula{$v_0$}{Vitesse initiale [$m/s$]} \\
 	\end{tabular}
 \end{twocols}
 
 \subsection*{Mouvement Circulaire}
-Mouvement d'un corps autour d'un point de rotation.
+Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 \subsubsection*{Uniforme (MCU)}
 \begin{twocols}[0.5][0.5]
 	$$
@@ -171,10 +171,10 @@ Mouvement d'un corps autour d'un point de rotation.
 	$$
 \nextcol
 	\begin{tabular}{rcl}
-		\formula{$\omega$}{Vitesse angulaire} \\
-		\formula{$\theta$}{Angle} \\
-		\formula{$\theta_0$}{Angle initial} \\
-		\formula{$t$}{Temps} \\
+		\formula{$\omega$}{Vitesse angulaire [$rad/s$]} \\
+		\formula{$\theta$}{Angle [$rad$]} \\
+		\formula{$\theta_0$}{Angle initial [$rad$]} \\
+		\formula{$t$}{Temps [$s$]} \\
 	\end{tabular}
 \end{twocols}
 \subsubsection*{Uniformément Accéléré (MCUA)}
@@ -190,8 +190,8 @@ Mouvement d'un corps autour d'un point de rotation.
 	$$
 \nextcol
 	\begin{tabular}{rcl}
-		\formula{$\alpha$}{Accélération angulaire} \\
-		\formula{$\omega_0$}{Vitesse angulaire initiale} \\
+		\formula{$\alpha$}{Accélération angulaire [$rad/s^2$]} \\
+		\formula{$\omega_0$}{Vitesse angulaire initiale [$rad/s$]} \\
 	\end{tabular}
 \end{twocols}
 
@@ -261,6 +261,9 @@ Mouvement d'un corps autour d'un point de rotation.
 
 \end{twocols}
 
+\vspace{1em}
+\emph{Les unités sont identiques aux unités de la section MRUA}
+
 \newpage
 
 \section{Newton}
@@ -278,12 +281,60 @@ Mouvement d'un corps autour d'un point de rotation.
 	\begin{equation*}
 		\overrightarrow{F} = m \cdot a
 	\end{equation*}
+	\begin{equation*}
+		a = \frac{\sum \overrightarrow{F}}{\sum m}
+	\end{equation*}
 \end{mdframed}
 \par\hspace{1em}
 \begin{mdframed}[leftmargin=2em, rightmargin=2em]
 	\textbf{3\textsup{ème} loi de Newton} \\ \hspace{0.5em}
 	Pour chaque action, il existe une réaction égale et opposée.
+
+	\begin{equation*}
+		\sum\overrightarrow{F} = 0
+	\end{equation*}
 \end{mdframed}
+
+\newpage
+
+\subsubsection*{Lois dérivées}
+Tirer un objet sur une pente \\
+\begin{twocols}
+	\includegraphics[height=4cm]{Newton-Pente}
+\nextcol
+	$$
+		\left.\frac{\sum F_t - \sum R_r - F_g}{\sum m}\:\middle|
+		\begin{array}{l}
+			F_g = m \cdot g \cdot \sin\alpha \\
+		\end{array}
+		\right.
+	$$
+\end{twocols}
+\par\vspace{1em}
+Système de poulies \\
+\begin{twocols}[0.5][0.5]
+	\includegraphics[width=1\textwidth]{Newton-Poulies}
+\nextcol
+	\begin{align*}
+		a &= \frac{\sum F_n - \sum R_n}{\sum m_n} \\
+		  &= \frac{g\cdot(m_1+m_2-m_5) - R_3}{m_1+m_2+m_3+m_4+m_5} \\
+	\end{align*}
+	\par\vspace{0.2em}
+	Variables \\
+	\begin{align*}
+		F_n &= m_n \cdot g \\
+		R_n &= \text{Résistance sur la masse $n$} \\
+	\end{align*}
+	\par\vspace{0.2em}
+	{\small
+	\textbf{notes} \\
+	$F_n$ est nulle si l'objet n'est pas en suspension (ex $m_4$) \\
+	Les masses qui ne sont pas en suspension et qui n'exercent pas de frottent sont tout de même comptées dans la somme des masses ($\sum m_n$)
+	}
+
+\end{twocols}
+
+\newpage
 
 \subsection*{Graviation Universelle}
 
