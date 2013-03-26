@@ -190,6 +190,7 @@ Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 	\centering
 	\includegraphics{Balistique}
 \end{figure*}
+\emph{Au sommet de la courbe: $v_y(t) = 0$}
 
 \subsection{Equations du mouvement}
 \begin{twocols}[0.5][0.5]
@@ -253,6 +254,11 @@ Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 	Alt. Maximale
 	\begin{equation*}
 		y_\text{max} = \frac{(v_0\cdot\sin{\alpha})^2}{2a} + y_0
+	\end{equation*}
+
+	Vitesse Résultante
+	\begin{equation*}
+		v_i(t) = \sqrt{v_y(t)^2 + v_x(t)^2}
 	\end{equation*}
 
 \end{twocols}
@@ -332,7 +338,7 @@ Système de poulies \\
 
 \newpage
 
-\subsection{Graviation Universelle}
+\subsection{Gravitation Universelle}
 
 	\begin{figure*}[h]
 		\centering
@@ -340,18 +346,18 @@ Système de poulies \\
 	\end{figure*}
 
 \begin{mdframed}[leftmargin=2em, rightmargin=2em]
-	\textbf{Loi de la graviation universelle} \\ \hspace{0.5em}
+	\textbf{Loi de la Gravitation universelle} \\ \hspace{0.5em}
 	Deux corps quelconques s'attirent de manière proportionelle à leur masse et inversément proportionnelle au carré de leur distance. \\
 	\par\hspace{0.5em}
 	\begin{twocols}[0.3][0.3]
 		$$F_G = G\cdot\frac{m_1 \cdot m_2}{d^2}$$
 		\nextcol
 		\begin{tabular}{rcl}
-			\formula{$F_G$}{Force de gravitation} \\
+			\formula{$F_G$}{Force de gravitation [N]} \\
 			$G$ & = & Gravitation universelle \\
 				  & & $6.67 \times 10^-11$ \\
-			\formula{$m_i$}{Masse} \\
-			\formula{$d$}{Distance entre des corps} \\
+			\formula{$m_i$}{Masse [Kg]} \\
+			\formula{$d$}{Distance entre des corps [Km]} \\
 		\end{tabular}
 	\end{twocols}
 \end{mdframed}
@@ -412,9 +418,9 @@ Lorsqu'une force est appliquée sur un corps attaché à un axe de rotation, cet
 	\nextcol
 	\begin{tabular}{rl}
 		$M$ & Moment de force \\
-		$F_\perp$ & Force perpendiculaire \\
-		$F$ & Force \\
-		$\alpha$ & Angle de la force \\
+		$F_\perp$ & Force perpendiculaire [N] \\
+		$F$ & Force [N] \\
+		$\alpha$ & Angle de la force [deg] \\
 	\end{tabular}
 	\end{twocols}
 \end{mdframed}
