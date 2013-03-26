@@ -5,8 +5,8 @@ Formulaire de Physique
 ## Contenu
 
 1. Mouvements
-  1 Mouvement Rectiligne
-  2 Mouvement Circulaire (Todo) (Amélioration nécessaire : Force centripète et centrifuge + schéma voiture)
+  1. Mouvement Rectiligne
+  2. Mouvement Circulaire (Todo) (Amélioration nécessaire : Force centripète et centrifuge + schéma voiture)
 
 2. Balistique
   1. Equations du mouvement
