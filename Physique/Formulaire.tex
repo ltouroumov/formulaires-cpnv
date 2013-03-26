@@ -35,7 +35,6 @@
 \usepackage{multirow}
 \usepackage{graphicx}
 \usepackage{lipsum}
-\usepackage{sistyle}
 \usepackage[linewidth=1pt]{mdframed}
 
 \graphicspath{ {images/} }
@@ -81,17 +80,18 @@
 
 \newcommand\formula[2]{#1 & = & #2}
 \newcommand\nextcol{}
-\newenvironmentx{twocols}[2][1=0.5, 2=0.4]{
+\newenvironmentx{twocols}[3][1=0.5, 2=0.4, 3=c]{
 	\def\colonewidth{#1}
 	\def\coltwowidth{#2}
+	\def\mpagealign{#3}
 	\renewcommand\nextcol{
 		%%\vspace{0.4em}
 		\end{minipage}
 		\vrule\quad
-		\begin{minipage}[c]{\coltwowidth\textwidth}
+		\begin{minipage}[\mpagealign]{\coltwowidth\textwidth}
 		%%\vspace{0.4em}
 	}
-	\begin{minipage}[c]{\colonewidth\textwidth}
+	\begin{minipage}[\mpagealign]{\colonewidth\textwidth}
 	%%\vspace{0.4em}
 }{
 	%%\vspace{0.4em}
