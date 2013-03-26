@@ -106,7 +106,7 @@
 
 \section{Mouvements}
 
-\subsection*{Mouvement Rectiligne}
+\subsection{Mouvement Rectiligne}
 Mouvement d'un corps sur une trajéctoire réctiligne.
 \subsubsection*{Uniforme (MRU)}
 \begin{twocols}[0.5][0.5]
@@ -144,7 +144,7 @@ Mouvement d'un corps sur une trajéctoire réctiligne.
 	\end{tabular}
 \end{twocols}
 
-\subsection*{Mouvement Circulaire}
+\subsection{Mouvement Circulaire}
 Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 \subsubsection*{Uniforme (MCU)}
 \begin{twocols}[0.5][0.5]
@@ -191,13 +191,14 @@ Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 	\includegraphics{Balistique}
 \end{figure*}
 
+\subsection{Equations du mouvement}
 \begin{twocols}[0.5][0.5]
 	Acceleration
 	\begin{equation*}
 	\left\{
 		\begin{array}{rcl}
 			\formula{a_x}{0} \\
-			\formula{a_y}{-g\;\text{OU}\;\const} \\
+			\formula{a_y}{-g} \\
 		\end{array}
 	\right.
 	\end{equation*}
@@ -207,27 +208,33 @@ Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 	\left\{
 		\begin{array}{rcl}
 			\formula{v_x(t)}{v_0 \cdot \cos{\alpha}} \\
-			\formula{v_y(t)}{v_0 \cdot \sin{\alpha}-a_y \cdot t^2} \\
+			\formula{v_y(t)}{v_0 \cdot \sin{\alpha}+a_y \cdot t} \\
 		\end{array}
 	\right.
 	\end{equation*}
+\nextcol
+
 	Position
 	\begin{equation*}
 	\left\{
 		\begin{array}{rcl}
 			\formula{x(t)}{x_0+v_0 \cdot \cos{\alpha} \cdot t} \\
-			\formula{y(t)}{y_0+v_0 \cdot \cos{\alpha} \cdot t-\frac{a \cdot t^2}{2}} \\
+			\formula{y(t)}{y_0+v_0 \cdot \sin{\alpha} \cdot t+{\displaystyle\frac{a \cdot t^2}{2}}} \\
 		\end{array}
 	\right.
 	\end{equation*}
 
-\nextcol
-	
+\end{twocols}
+
+\subsection{Equations annexes}
+\emph{A utiliser avec précautions, ne s'appliquent pas dans tous les cas.}
+\par\vspace{1em}
+\begin{twocols}[0.5][0.4][t]
 	Port\'ee
 	\begin{equation*}
 		\left\{
 		\begin{array}{ll}
-			p=\frac{v_0\,^2 \cdot \sin (2 \cdot \alpha)}{a} & \text{Si}\:y_0 = 0 \\
+			p={\displaystyle \frac{v_0\,^2 \cdot \sin (2 \cdot \alpha)}{a}} & \text{Si}\:y_0 = 0 \\
 			p=\text{solve}\left(\left\{
 					\begin{array}{rcl}
 						y(t) & = & 0 \\
@@ -240,6 +247,8 @@ Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 		\end{array}
 		\right.
 	\end{equation*}
+
+\nextcol
 
 	Alt. Maximale
 	\begin{equation*}
@@ -254,7 +263,7 @@ Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 \newpage
 
 \section{Newton}
-\subsection*{Lois de Newton}
+\subsection{Lois de Newton}
 \begin{mdframed}[leftmargin=2em, rightmargin=2em]
 	\textbf{1\textsup{ere} loi de Newton} \\ \hspace{0.5em}
 	%% Tout corps persévère dans l'état de repos ou de mouvement uniforme en ligne droite dans lequel il se trouve, à moins que quelque force n'agisse sur lui, et ne le contraigne à changer d'état.
@@ -266,10 +275,10 @@ Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 	%% L'altération du mouvement est proportionnelle à la force qui lui est imprimée ; et cette altération se fait en ligne droite dans la direction de la force.
 	L'altération du mouvement est proportionnelle à la force qui lui est imprimée ; et cette altération se fait en ligne droite dans la direction de la force.	
 	\begin{equation*}
-		\overrightarrow{F} = m \cdot a
+		F = m \cdot a
 	\end{equation*}
 	\begin{equation*}
-		a = \frac{\sum \overrightarrow{F}}{\sum m}
+		a = \frac{\sum F}{\sum m}
 	\end{equation*}
 \end{mdframed}
 \par\hspace{1em}
@@ -323,7 +332,7 @@ Système de poulies \\
 
 \newpage
 
-\subsection*{Graviation Universelle}
+\subsection{Graviation Universelle}
 
 	\begin{figure*}[h]
 		\centering
@@ -335,7 +344,7 @@ Système de poulies \\
 	Deux corps quelconques s'attirent de manière proportionelle à leur masse et inversément proportionnelle au carré de leur distance. \\
 	\par\hspace{0.5em}
 	\begin{twocols}[0.3][0.3]
-		$$\overrightarrow{F_G} = G\cdot\frac{m_1 \cdot m_2}{d^2}$$
+		$$F_G = G\cdot\frac{m_1 \cdot m_2}{d^2}$$
 		\nextcol
 		\begin{tabular}{rcl}
 			\formula{$F_G$}{Force de gravitation} \\
@@ -355,7 +364,7 @@ Système de poulies \\
 \end{figure*}
 Cette loi peut être dérivée pour lorsqu'un objet est suffisament proche d'un corps de masse plus importante que sa masse et taille new devienent insignifiants.
 
-	$$\overrightarrow{F_G} = G\cdot\frac{m}{r^2}$$
+	$$F_G = G\cdot\frac{m}{r^2}$$
 
 \subsubsection*{Attraction entre deux champs de gravité}
 \begin{figure*}[h]
@@ -364,7 +373,7 @@ Cette loi peut être dérivée pour lorsqu'un objet est suffisament proche d'un 
 \end{figure*}
 Une autre dérivation de cette loi peut s'appliquer lorsqu'un objet est soumis à deux champs de gravité distincts. Cette dérivation permet d'obtenir la direction et la vitesse avec laquel le corps au milieu se dirige.
 
-	$$\overrightarrow{a} = G \cdot \left(\frac{m_1 \cdot m_2}{d_1\,^2} - \frac{m_3 \cdot m_2}{d_2\,^2}\right)$$
+	$$a = G \cdot \left(\frac{m_1 \cdot m_2}{d_1\,^2} - \frac{m_3 \cdot m_2}{d_2\,^2}\right)$$
 
 \subsubsection*{Équilibre d'attraction}
 Lorsque l'objet se trouve à l'équilibre, l'accélération vaut 0. La formule peut donc être modifiée.
@@ -379,11 +388,11 @@ Lorsque l'objet se trouve à l'équilibre, l'accélération vaut 0. La formule p
 \section{Statique}
 La statique est l'étude des forces sur un système à l'équilibre, la somme de ses forces est donc nulle.
 
-		$$\sum \vec{F} = 0$$
+	$$\sum \vec{F} = 0$$
 
 Les forces sont considérées comme des vecteurs est s'additionnenet donc comme tels.
 
-\subsection*{Moment de Force}
+\subsection{Moment de Force}
 Lorsqu'une force est appliquée sur un corps attaché à un axe de rotation, cette force produit un moment de force dont l'effet est propotionnel à la distance par rapport au centre de rotation et est mitigé par l'angle en fonction du corps.
 \par\hspace{1em}
 \begin{mdframed}[leftmargin=2em, rightmargin=2em]
@@ -395,6 +404,10 @@ Lorsqu'une force est appliquée sur un corps attaché à un axe de rotation, cet
 			\formula{M}{F_\perp \cdot d} \\
 			\end{array}
 		\right.
+	$$
+
+	$$
+		\sum M = 0
 	$$
 	\nextcol
 	\begin{tabular}{rl}
@@ -408,6 +421,67 @@ Lorsqu'une force est appliquée sur un corps attaché à un axe de rotation, cet
 
 \newpage
 
+\section{Sonique}
+
+\subsection{Intensité et Décibels}
+\begin{twocols}
+	\begin{align*}
+		\beta &= 10 \cdot \log_{10}\left(\frac{I}{I_0}\right) \\
+	\end{align*}
+\nextcol
+	\begin{tabular}{rl}
+		$\beta$ & Décibels \\
+		$I$ & Intensité \\
+		$I_0$ & Seuil d'audition ($10^-12$) \\
+	\end{tabular}
+\end{twocols}
+
+\subsection{Relations avec la pression}
+\begin{twocols}
+		\begin{align*}
+		I &= \frac{(\Delta p)^2}{2 \cdot \rho \cdot V_\text{son}} \\
+		\beta &= 20 \cdot \log_{20}\left(\frac{\Delta p}{\Delta p_0}\right) \\
+	\end{align*}
+\nextcol
+	\begin{tabular}{rl}
+		$\Delta p$ & Amplitude (différence) de pression \\
+		$\rho$ & Masse volumique du milieu \\
+		$V_\text{son}$ & Vitesse du son (dans l'air: 344 [m/s]) \\
+		$\beta$ & Décibels \\
+		$I$ & Intensité \\
+	\end{tabular}
+\end{twocols}
+
+\subsubsection*{Autre formules}
+\begin{twocols}
+	\begin{align*}
+		10^{\frac{\displaystyle \beta_2-\beta_1}{10}}=\frac{I_2}{I_1} \\
+		\Delta\beta = 10 \cdot \log_{10}(\Delta n)
+	\end{align*}
+\nextcol
+	\begin{tabular}{rl}
+		$\Delta\beta$ & Diffèrence de décibels \\
+		$\Delta n$ & Nombre de sources supplémentaires \\
+	\end{tabular}
+\end{twocols}
+
+\subsection{Dispertion et Amortissement}
+\begin{figure*}[h]
+	\centering
+	\includegraphics[width=0.75\textwidth]{Sonique-Dispersion}
+\end{figure*}
+
+\begin{twocols}[0.5][0.5]
+	\begin{align*}
+		I_1 \cdot S_1 &= I_2 \cdot S_2 \\
+		I_1 \cdot r_1^2 &= I_2 \cdot r_2^2	\\
+	\end{align*}
+\nextcol
+	\begin{align*}
+		\frac{I_2}{I_1} &= \frac{S_1}{S_2} \\
+		\frac{I_2}{I_1} &= \left(\frac{r_1}{r_2}\right)^2 \\
+	\end{align*}
+\end{twocols}
 \section{Transfert de chaleur}
 
 \begin{twocols}
@@ -424,15 +498,30 @@ Lorsqu'une force est appliquée sur un corps attaché à un axe de rotation, cet
 \nextcol
 
 	\begin{tabular}{rl}
-		$Q$ & Energie [$J$] \\
-		$\Delta\theta$ & Diff. de temperature [$\degC$]\\
-		$m$ & Masse [$kg$] \\
-		$c$ & Chaleur specifique [$\tfrac{J}{kg \cdot \degC}$] \\
-		$C$ & Coefficient de transformation [$\tfrac{J}{kg}$]
+		$Q$ & Energie [J] \\
+		$\Delta\theta$ & Diff. de temperature [C]\\
+		$m$ & Masse [kg] \\
+		$c$ & Chaleur specifique \\
+		$C$ & Coefficient de transformation
 	\end{tabular}
 
 
 \end{twocols}
+
+\newpage
+
+\tableofcontents
+\vspace{2em}
+\textbf{Contributeurs} \\
+\begin{itemize}
+	\item Jeremy David (sti34a 2013, \texttt{http://github.com/ltouroumov})
+	\item Kevin Wenger (sti34a 2013)
+	\item Vincent Kobel (sti34a 2013)
+\end{itemize}
+\textbf{Correcteurs} \\
+\begin{itemize}
+	\item Olivier Pittet
+\end{itemize}
 
 %----------------------------------------------------------------------------------------
 
