@@ -152,6 +152,7 @@ Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 	\left\{
 		\begin{array}{rcl}
 			\formula{\omega}{\const} \\
+			\formula{\omega}{\frac{\Delta\theta}{\Delta t}} \\
 			\formula{\theta}{\omega \cdot t + \theta_0} \\
 		\end{array}
 	\right.
@@ -172,13 +173,20 @@ Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 			\formula{\alpha}{\const} \\
 			\formula{\omega}{\omega_0 + \alpha \cdot t} \\
 			\formula{\theta}{\theta_0 + \omega \cdot t + \frac{\alpha \cdot t^2}{2}} \\
+			\formula{V}{\omega \cdot r} \\
+			\formula{a_c}{\frac{V^2}{r}\;\text{OU}\;\omega^2 \cdot r} \\
+			\formula{F_c}{m \cdot a_c} \\
 		\end{array}
 	\right.
 	$$
 \nextcol
 	\begin{tabular}{rcl}
+		\formula{$r$}{Rayon [m]} \\
 		\formula{$\alpha$}{Accélération angulaire [$rad/s^2$]} \\
 		\formula{$\omega_0$}{Vitesse angulaire initiale [$rad/s$]} \\
+		\formula{$V$}{Vitesse tangantielle [$m/s$]} \\
+		\formula{$a_c$}{Accélération centripète [$m/s^2$]} \\
+		\formula{$F_c$}{Force centripète [$N$]} \\
 	\end{tabular}
 \end{twocols}
 
