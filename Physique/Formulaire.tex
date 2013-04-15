@@ -518,6 +518,83 @@ Lorsqu'une force est appliquée sur un corps attaché à un axe de rotation, cet
 
 \newpage
 
+\section{Energie \& Puissance}
+
+\subsection{Energie mécanique}
+
+\subsubsection{Travail de force}
+\begin{figure*}[h]
+	\centering
+	\includegraphics[width=0.3\textwidth]{Mecanique-Generalite}
+\end{figure*}
+\begin{twocols}[0.5][0.5]
+	\begin{align*}
+		W &= F \cdot \ell \\
+		  &= F_\parallel \cdot \ell \\
+		  &= F \cdot \sin \alpha \cdot \ell \\
+		  &= F \cdot \cos \beta \cdot \ell \\
+	\end{align*}
+\nextcol
+	\begin{tabular}{rcl}
+		\formula{$W$}{Travail de force [J]} \\
+		\formula{$F$}{Force [N]} \\
+		\formula{$\ell$}{Distance [m]} \\
+		\formula{$\alpha \: \beta$}{Angle [Deg]} \\
+	\end{tabular}
+\end{twocols}
+
+\textbf{Formules dérivées}
+
+\begin{figure*}[h]
+	\centering
+	\includegraphics[width=0.3\textwidth]{Mecanique-Travail}
+\end{figure*}
+Tavail de force sur une pente \\
+\begin{twocols}[0.5][0.5]
+	\begin{align*}
+		h &= \sin \alpha \cdot d \\
+		W &= h \cdot m \cdot g \\
+	\end{align*}
+\nextcol
+	\begin{tabular}{rcl}
+		\formula{$h$}{Dénivelé [m]} \\
+		\formula{$d$}{Distance [m]} \\
+		\formula{$m$}{Masse du corps [kg]} \\
+	\end{tabular}
+\end{twocols}
+
+\newpage
+
+\subsection{Energie cynétique}
+
+\newcommand\ecin{E_{\text{cin}}}
+\newcommand\ecinx[1]{E_{\text{cin}_#1}}
+
+\begin{mdframed}
+	\textbf{Théorème}
+	\begin{align*}
+		E_{W_{AB}} &= \ecinx{A} - \ecinx{B} \\
+		&= m \cdot g \cdot d \\
+		\ecin &= \frac{1}{2} \cdot m \cdot v^2 \\
+	\end{align*}
+
+\end{mdframed}
+
+On sait pas \\
+\begin{twocols}[0.5][0.5]
+	\begin{align*}
+		\ecin &= x \cdot f & \text{\itshape à plat} \\
+		&= m \cdot g \cdot x \cdot f & \text{\itshape en pente} \\
+	\end{align*}
+\nextcol
+	\begin{tabular}{rcl}
+		\formula{$x$}{Distance d'arrêt [m]} \\
+		\formula{$f$}{Force de frottement [N]} \\
+	\end{tabular}
+\end{twocols}
+
+\newpage
+
 \section{Sonique}
 
 \subsection{Intensité et Décibels}
