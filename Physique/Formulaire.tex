@@ -415,6 +415,59 @@ Lorsque l'objet se trouve à l'équilibre, l'accélération vaut 0. La formule p
 
 \newpage
 
+\subsection{Mise en orbite}
+
+\subsubsection*{Géostationnaire}
+\begin{figure*}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Newton-OrbiteGeostationnaire}
+\end{figure*}
+
+\begin{mdframed}
+	Pour qu'un objet soit en orbite géosynchrone la force de gravité doit être égale à la force centripète.
+	$$F_g = F_c$$
+
+	$$\omega = \frac{\text{Nombre de tours}}{\text{Temps [s]}}$$
+
+	\textbf{Generalisation} \\
+	\begin{twocols}
+		\begin{align*}
+			G\cdot\frac{M_p\cdot M_o}{d^2} &= M_o \cdot \omega^2 \cdot d \\
+			d &= r_p + alt \\
+		\end{align*}
+
+	\nextcol
+
+		\begin{tabular}{rcl}
+			\formula{$M_p$}{Masse de la planète [Kg]} \\
+			\formula{$M_o$}{Masse de l'objet [Kg]} \\
+			\formula{$d$}{Distance entre les corps [km]} \\
+			\formula{$r_p$}{Rayon de la planète [km]} \\
+			\formula{$alt$}{Altitude [km]} \\
+		\end{tabular}
+
+	\end{twocols}
+
+\end{mdframed}
+
+\vspace{1em}
+
+\begin{mdframed}
+	\textbf{Nombre de passages au dessus d'un point pour une période donnée} \\
+
+	\begin{twocols}
+		\begin{align*}
+		n &= \frac{\omega_o}{\omega_p} \\
+	\end{align*}
+	\nextcol
+		Sens identiques: $n+1$ \\
+		Sens contraires: $n-1$
+	\end{twocols}
+\end{mdframed}
+
+
+\newpage
+
 \section{Statique}
 La statique est l'étude des forces sur un système à l'équilibre, la somme de ses forces est donc nulle.
 
