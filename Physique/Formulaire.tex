@@ -111,14 +111,14 @@
 Mouvement d'un corps sur une trajéctoire réctiligne.
 \subsubsection*{Uniforme (MRU)}
 \begin{twocols}[0.5][0.5]
-	$$
+	\[
 	\left\{
-		\begin{array}{r c l}
-			\formula{v}{\const} \\
-			\formula{x}{x_0 + v \cdot t} \\
-		\end{array}
+		\begin{aligned}
+			v &= \const \\
+			x &= x_0 + v \cdot t \\
+		\end{aligned}
 	\right.
-	$$
+	\]
 \nextcol
 	\begin{tabular}{rcl}
 		\formula{$v$}{Vitesse [$m/s$]} \\
@@ -129,15 +129,15 @@ Mouvement d'un corps sur une trajéctoire réctiligne.
 \end{twocols}
 \subsubsection*{Uniformément Accéléré (MRUA)}
 \begin{twocols}
-	$$
+	\[
 	\left\{
-		\begin{array}{rcl}
-			\formula{a}{\const} \\
-			\formula{v(t)}{v_0 + a \cdot t} \\
-			\formula{x(t)}{x_0 + v_0 \cdot t + \frac{a \cdot t^2}{2}} \\
-		\end{array}
+		\begin{aligned}
+			a &= \const \\
+			v(t) &= v_0 + a \cdot t \\
+			x(t) &= x_0 + v_0 \cdot t + \frac{a \cdot t^2}{2} \\
+		\end{aligned}
 	\right.
-	$$
+	\]
 \nextcol
 	\begin{tabular}{rcl}
 		\formula{$a$}{Accélération [$m/s^2$]} \\
@@ -149,15 +149,15 @@ Mouvement d'un corps sur une trajéctoire réctiligne.
 Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 \subsubsection*{Uniforme (MCU)}
 \begin{twocols}[0.5][0.5]
-	$$
+	\[
 	\left\{
-		\begin{array}{rcl}
-			\formula{\omega}{\const} \\
-			\formula{\omega}{\frac{\Delta\theta}{\Delta t}} \\
-			\formula{\theta}{\omega \cdot t + \theta_0} \\
-		\end{array}
+		\begin{aligned}
+			\omega &= \const \\
+			\omega &= \frac{\Delta\theta}{\Delta t} \\
+			\theta &= \omega \cdot t + \theta_0 \\
+		\end{aligned}
 	\right.
-	$$
+	\]
 \nextcol
 	\begin{tabular}{rcl}
 		\formula{$\omega$}{Vitesse angulaire [$rad/s$]} \\
@@ -168,18 +168,18 @@ Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 \end{twocols}
 \subsubsection*{Uniformément Accéléré (MCUA)}
 \begin{twocols}
-	$$
+	\[
 	\left\{
-		\begin{array}{rcl}
-			\formula{\alpha}{\const} \\
-			\formula{\omega}{\omega_0 + \alpha \cdot t} \\
-			\formula{\theta}{\theta_0 + \omega \cdot t + \frac{\alpha \cdot t^2}{2}} \\
-			\formula{V}{\omega \cdot r} \\
-			\formula{a_c}{\frac{V^2}{r}\;\text{OU}\;\omega^2 \cdot r} \\
-			\formula{F_c}{m \cdot a_c} \\
-		\end{array}
+		\begin{aligned}
+			\alpha &= \const \\
+			\omega &= \omega_0 + \alpha \cdot t \\
+			\theta &= \theta_0 + \omega \cdot t + \frac{\alpha \cdot t^2}{2} \\
+			V &= \omega \cdot r \\
+			a_c &= \frac{V^2}{r}\;\text{OU}\;\omega^2 \cdot r \\
+			F_c &= m \cdot a_c \\
+		\end{aligned}
 	\right.
-	$$
+	\]
 \nextcol
 	\begin{tabular}{rcl}
 		\formula{$r$}{Rayon [m]} \\
@@ -206,20 +206,20 @@ Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 	Acceleration
 	\begin{equation*}
 	\left\{
-		\begin{array}{rcl}
-			\formula{a_x}{0} \\
-			\formula{a_y}{-g} \\
-		\end{array}
+		\begin{aligned}
+			a_x &= 0 \\
+			a_y &= -g \\
+		\end{aligned}
 	\right.
 	\end{equation*}
 	\par\vspace{1em}
 	Vitesse
 	\begin{equation*}
 	\left\{
-		\begin{array}{rcl}
-			\formula{v_x(t)}{v_0 \cdot \cos{\alpha}} \\
-			\formula{v_y(t)}{v_0 \cdot \sin{\alpha}+a_y \cdot t} \\
-		\end{array}
+		\begin{aligned}
+			v_x(t) &= v_0 \cdot \cos{\alpha} \\
+			v_y(t) &= v_0 \cdot \sin{\alpha}+a_y \cdot t \\
+		\end{aligned}
 	\right.
 	\end{equation*}
 \nextcol
@@ -227,10 +227,10 @@ Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 	Position
 	\begin{equation*}
 	\left\{
-		\begin{array}{rcl}
-			\formula{x(t)}{x_0+v_0 \cdot \cos{\alpha} \cdot t} \\
-			\formula{y(t)}{y_0+v_0 \cdot \sin{\alpha} \cdot t+{\displaystyle\frac{a \cdot t^2}{2}}} \\
-		\end{array}
+		\begin{aligned}
+			x(t) &= x_0+v_0 \cdot \cos{\alpha} \cdot t \\
+			y(t) &= y_0+v_0 \cdot \sin{\alpha} \cdot t+{\displaystyle\frac{a \cdot t^2}{2}} \\
+		\end{aligned}
 	\right.
 	\end{equation*}
 
@@ -243,16 +243,15 @@ Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 	Port\'ee
 	\begin{equation*}
 		\left\{
-		\begin{array}{ll}
-			p={\displaystyle \frac{v_0\,^2 \cdot \sin (2 \cdot \alpha)}{a}} & \text{Si}\:y_0 = 0 \\
-			p=\text{solve}\left(\left\{
-					\begin{array}{rcl}
-						y(t) & = & 0 \\
-						x(t) & = & n \\
-					\end{array}
-			\right|
-				\text{en} \: n
-			\right)
+		\begin{array}{rll}
+			p &= {\displaystyle \frac{v_0\,^2 \cdot \sin (2 \cdot \alpha)}{a}} & \text{Si}\:y_0 = 0 \\[1em]
+			p &= \text{résoudre}\:\left\{
+					\begin{aligned}
+						y(t) &= 0 \\
+						x(t) &= n \\
+					\end{aligned}
+			\right.
+				\text{pour} \: n
 			 & \text{Si}\:y_0 \neq 0
 		\end{array}
 		\right.
@@ -289,12 +288,10 @@ Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 	\textbf{2\textsup{ème} loi de Newton} \\ \hspace{0.5em}
 	%% L'altération du mouvement est proportionnelle à la force qui lui est imprimée ; et cette altération se fait en ligne droite dans la direction de la force.
 	L'altération du mouvement est proportionnelle à la force qui lui est imprimée ; et cette altération se fait en ligne droite dans la direction de la force.	
-	\begin{equation*}
-		F = m \cdot a
-	\end{equation*}
-	\begin{equation*}
-		a = \frac{\sum F}{\sum m}
-	\end{equation*}
+	\begin{align*}
+		F &= m \cdot a \\
+		a &= \frac{\sum F}{\sum m} \\
+	\end{align*}
 \end{mdframed}
 \par\hspace{1em}
 \begin{mdframed}[leftmargin=2em, rightmargin=2em]
@@ -313,13 +310,14 @@ Tirer un objet sur une pente \\
 \begin{twocols}[0.5][0.5]
 	\includegraphics[height=4cm]{Newton-Pente}
 \nextcol
-	$$
-		\left.\frac{\sum F_t - \sum R_r - F_g}{\sum m}\:\middle|
-		\begin{array}{l}
-			F_g = m \cdot g \cdot \sin\alpha \\
-		\end{array}
+	\[
+		\left.\frac{\sum F_t - \sum R_r - F_g}{\sum m}\:\middle|F_g = m \cdot g \cdot \sin\alpha
 		\right.
-	$$
+	\]
+	\par\vspace{0.5em}
+	{\small \textbf{notes} \\
+		$\alpha = \tan^{-1}(\text{pente {\tiny en \%}})$
+	}
 \end{twocols}
 \par\vspace{1em}
 Système de poulies \\
@@ -375,12 +373,12 @@ Forces de retenue et de traction \\
 	Deux corps quelconques s'attirent de manière proportionelle à leur masse et inversément proportionnelle au carré de leur distance. \\
 	\par\hspace{0.5em}
 	\begin{twocols}[0.3][0.3]
-		$$F_G = G\cdot\frac{m_1 \cdot m_2}{d^2}$$
+		\[F_G = G\cdot\frac{m_1 \cdot m_2}{d^2}\]
 		\nextcol
 		\begin{tabular}{rcl}
 			\formula{$F_G$}{Force de gravitation [N]} \\
-			$G$ & = & Gravitation universelle \\
-				  & & $6.67 \times 10^-11$ \\
+			\formula{$G$}{Gravitation universelle} \\
+					  & & $6.67 \times 10^-11$ \\
 			\formula{$m_i$}{Masse [Kg]} \\
 			\formula{$d$}{Distance entre des corps [Km]} \\
 		\end{tabular}
@@ -389,13 +387,14 @@ Forces de retenue et de traction \\
 \par\hspace{1em}
 
 \subsubsection*{Gravitation d'un corps}
+
 \begin{figure*}[h]
 	\centering
 	\includegraphics{Newton-Gravitation-Attraction}
 \end{figure*}
 Cette loi peut être dérivée lorsqu'un objet est suffisamment proche d'un corps de masse et taille beaucoup plus importantes. Le corps plus petit devient donc insignifiant.
 
-	$$F_G = G\cdot\frac{m}{r^2}$$
+	\[F_G = G\cdot\frac{m}{r^2}\]
 
 \subsubsection*{Attraction entre deux champs de gravité}
 \begin{figure*}[h]
@@ -404,15 +403,15 @@ Cette loi peut être dérivée lorsqu'un objet est suffisamment proche d'un corp
 \end{figure*}
 Une autre dérivation de cette loi peut s'appliquer lorsqu'un objet est soumis à deux champs de gravité distincts. Cette dérivation permet d'obtenir la direction et la vitesse avec laquel le corps au milieu se dirige.
 
-	$$a = G \cdot \left(\frac{m_1 \cdot m_2}{d_1\,^2} - \frac{m_3 \cdot m_2}{d_2\,^2}\right)$$
+	\[a = G \cdot \left(\frac{m_1 \cdot m_2}{d_1\,^2} - \frac{m_3 \cdot m_2}{d_2\,^2}\right)\]
 
 \subsubsection*{Équilibre d'attraction}
 Lorsque l'objet se trouve à l'équilibre, l'accélération vaut 0. La formule peut donc être modifiée.
 
-	$$\frac{m_1 \cdot m_2}{d_1\,^2} = \frac{m_3 \cdot m_2}{d_2\,^2}$$
+	\[\frac{m_1 \cdot m_2}{d_1\,^2} = \frac{m_3 \cdot m_2}{d_2\,^2}\]
 
 \subsubsection*{Rapport des distances et des masses}
-	$$\frac{d_1\,^2}{d_2\, ^2} = \frac{m_1}{m_3}$$
+	\[\frac{d_1\,^2}{d_2\, ^2} = \frac{m_1}{m_3}\]
 
 \newpage
 
@@ -426,9 +425,9 @@ Lorsque l'objet se trouve à l'équilibre, l'accélération vaut 0. La formule p
 
 \begin{mdframed}
 	Pour qu'un objet soit en orbite géosynchrone la force de gravité doit être égale à la force centripète.
-	$$F_g = F_c$$
+	\[F_g = F_c\]
 
-	$$\omega = \frac{\text{Nombre de tours}}{\text{Temps [s]}}$$
+	\[\omega = \frac{\text{Nombre de tours}}{\text{Temps [s]}}\]
 
 	\textbf{Generalisation} \\
 	\begin{twocols}
@@ -472,7 +471,7 @@ Lorsque l'objet se trouve à l'équilibre, l'accélération vaut 0. La formule p
 \section{Statique}
 La statique est l'étude des forces sur un système à l'équilibre, la somme de ses forces est donc nulle.
 
-	$$\sum \vec{F} = 0$$
+	\[\sum \vec{F} = 0\]
 
 Les forces sont considérées comme des vecteurs est s'additionnenet donc comme tels.
 
@@ -495,24 +494,22 @@ Lorsqu'une force est appliquée sur un corps attaché à un axe de rotation, cet
 \par\hspace{1em}
 \begin{mdframed}[leftmargin=2em, rightmargin=2em]
 	\begin{twocols}[0.5][0.5]
-	$$
+	\[
 		\left\{
-			\begin{array}{rcl}
-			\formula{F_\perp}{F \cdot \sin \alpha} \\
-			\formula{M}{F_\perp \cdot d} \\
-			\end{array}
+			\begin{aligned}
+			F_\perp &= F \cdot \sin \alpha \\
+			M &= F_\perp \cdot d \\
+			\end{aligned}
 		\right.
-	$$
+	\]
 
-	$$
-		\sum M = 0
-	$$
+	\[\sum M = 0\]
 	\nextcol
-	\begin{tabular}{rl}
-		$M$ & Moment de force \\
-		$F_\perp$ & Force perpendiculaire [N] \\
-		$F$ & Force [N] \\
-		$\alpha$ & Angle de la force [deg] \\
+	\begin{tabular}{rcl}
+		\formula{$M$}{Moment de force} \\
+		\formula{$F_\perp$}{Force perpendiculaire [N]} \\
+		\formula{$F$}{Force [N]} \\
+		\formula{$\alpha$}{Angle de la force [deg]} \\
 	\end{tabular}
 	\end{twocols}
 \end{mdframed}
@@ -604,10 +601,10 @@ On sait pas \\
 		\beta &= 10 \cdot \log_{10}\left(\frac{I}{I_0}\right) \\
 	\end{align*}
 \nextcol
-	\begin{tabular}{rl}
-		$\beta$ & Décibels \\
-		$I$ & Intensité \\
-		$I_0$ & Seuil d'audition ($10^-12$) \\
+	\begin{tabular}{rcl}
+		\formula{$\beta$}{Décibels} \\
+		\formula{$I$}{Intensité} \\
+		\formula{$I_0$}{Seuil d'audition ($10^{-12}$)} \\
 	\end{tabular}
 \end{twocols}
 
@@ -618,25 +615,25 @@ On sait pas \\
 		\beta &= 20 \cdot \log_{20}\left(\frac{\Delta p}{\Delta p_0}\right) \\
 	\end{align*}
 \nextcol
-	\begin{tabular}{rl}
-		$\Delta p$ & Amplitude (différence) de pression \\
-		$\rho$ & Masse volumique du milieu \\
-		$V_\text{son}$ & Vitesse du son (dans l'air: 344 [m/s]) \\
-		$\beta$ & Décibels \\
-		$I$ & Intensité \\
+	\begin{tabular}{rcl}
+		\formula{$\Delta p$}{Amplitude (différence) de pression} \\
+		\formula{$\rho$}{Masse volumique du milieu} \\
+		\formula{$V_\text{son}$}{Vitesse du son (dans l'air: 344 [m/s])} \\
+		\formula{$\beta$}{Décibels} \\
+		\formula{$I$}{Intensité} \\
 	\end{tabular}
 \end{twocols}
 
 \subsubsection*{Autre formules}
 \begin{twocols}
 	\begin{align*}
-		10^{\frac{\displaystyle \beta_2-\beta_1}{10}}=\frac{I_2}{I_1} \\
-		\Delta\beta = 10 \cdot \log_{10}(\Delta n)
+		\frac{I_2}{I_1} &= 10^{\frac{\displaystyle \beta_2-\beta_1}{10}} \\
+		\Delta\beta &= 10 \cdot \log_{10}(\Delta n)
 	\end{align*}
 \nextcol
-	\begin{tabular}{rl}
-		$\Delta\beta$ & Diffèrence de décibels \\
-		$\Delta n$ & Nombre de sources supplémentaires \\
+	\begin{tabular}{rcl}
+		\formula{$\Delta\beta$}{Diffèrence de décibels} \\
+		\formula{$\Delta n$}{Nombre de sources supplémentaires} \\
 	\end{tabular}
 \end{twocols}
 
@@ -659,16 +656,24 @@ On sait pas \\
 \end{twocols}
 \section{Transfert de chaleur}
 
-\begin{twocols}
-	
-\begin{equation*}
-	\begin{array}{r c l}
-		\formula{\sum{Q}}{0} \\
-		\formula{Q}{m\,c\,\Delta\theta} \\
-		\formula{Q}{m\,C} \\
-		\formula{\Delta\theta}{T_2 - T_2} \\
-	\end{array}
-\end{equation*}
+\begin{mdframed}
+	{\large\bfseries Théorème} \\
+	\begin{twocols}
+		\begin{align*}
+			\sum Q &= 0 \\[1em]
+			Q_n &= m \cdot c \cdot \Delta\theta & \text{Ch. température} \\
+			&= m \cdot L & \text{Ch. état} \\
+		\end{align*}
+	\nextcol
+		\begin{tabular}{rcl}
+			\formula{$Q_n$}{Energie [J]} \\
+			\formula{$\Delta\theta$}{Diff. de temperature [C}]\\
+			\formula{$m$}{Masse [kg]} \\
+			\formula{$c$}{Chaleur specifique} \\
+			\formula{$L$}{Coefficient de transformation} \\
+		\end{tabular}
+	\end{twocols}
+\end{mdframed}
 
 \nextcol
 
@@ -694,10 +699,10 @@ On sait pas \\
 	\item[Timothée Moulin] sti34a 2013, \texttt{http://github.com/tehem}
 	\item[Vincent Kobel] sti34a 2013
 \end{description}
-{\large\bfseries Correcteurs} \\
-\begin{description}[style=nextline]
-	\item[Olivier Pittet] Enseignant CPNV
-\end{description}
+%% {\large\bfseries Correcteurs} \\
+%% \begin{description}[style=nextline]
+%% 	\item[Olivier Pittet] Enseignant CPNV
+%% \end{description}
 
 %----------------------------------------------------------------------------------------
 
