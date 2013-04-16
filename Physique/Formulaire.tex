@@ -236,7 +236,7 @@ Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 
 \end{twocols}
 
-\subsection{Equations annexes}
+\subsection*{Equations annexes}
 \emph{A utiliser avec précautions, ne s'appliquent pas dans tous les cas.}
 \par\vspace{1em}
 \begin{twocols}[0.5][0.4][t]
@@ -479,14 +479,30 @@ Les forces sont considérées comme des vecteurs est s'additionnenet donc comme 
 
 \newcommand\fcount[1]{\text{nombre de}\left(#1\right)}
 
-\begin{twocols}[0.5][0.5]
+\begin{figure*}[h]
+	\centering
 	\includegraphics{Statique-CentreGravite}
-\nextcol
+\end{figure*}
+
+\begin{twocols}[0.5][0.5]
 	\begin{align*}
+		m &= S \cdot d & \text{(1)} \\[1em]
 		p &= \sum m \\[1em]
 		G_x &= \frac{\sum\left(m_n \cdot x_n\right)}{p} \\[1em]
 		G_y &= \frac{\sum\left(m_n \cdot y_n\right)}{p} \\
 	\end{align*}
+\nextcol
+	\begin{tabular}{rcl}
+		\formula{$m$}{Masse [Kg]} \\
+		\formula{$S$}{Surface [$m^2$]} \\
+		\formula{$d$}{Densité [$Kg/m^2$]} \\
+		\formula{$p$}{Masse du système [Kg]} \\
+		\formula{$G_x\;\text{et}\;G_y$}{Coordonnée du centre de gravité [m]} \\
+	\end{tabular}
+	\par\vspace{0.5em}
+	{\small \textbf{notes} \\
+		(1) Le calcul $m = S \cdot d$ n'est pas applicable dans toutes les situations.
+	}
 \end{twocols}
 
 \subsection{Moment de Force}
@@ -520,7 +536,7 @@ Lorsqu'une force est appliquée sur un corps attaché à un axe de rotation, cet
 
 \subsection{Energie mécanique}
 
-\subsubsection{Travail de force}
+\subsubsection*{Travail de force}
 \begin{figure*}[h]
 	\centering
 	\includegraphics[width=0.3\textwidth]{Mecanique-Generalite}
@@ -563,33 +579,107 @@ Tavail de force sur une pente \\
 
 \newpage
 
-\subsection{Energie cynétique}
+\subsection{Energie Cynétique \& Potentielle}
 
-\newcommand\ecin{E_{\text{cin}}}
-\newcommand\ecinx[1]{E_{\text{cin}_#1}}
+\newcommand\ex[1]{E_{#1}}
+\newcommand\ecin{\ex{\text{cin}}}
+\newcommand\ecinx[1]{\ex{\text{cin}_{#1}}}
+\newcommand\epot{\ex{\text{pot}}}
+\newcommand\epotx[1]{\ex{\text{pot}_{#1}}}
+\newcommand\ew[1]{\ex{W_{#1}}}
 
 \begin{mdframed}
-	\textbf{Théorème}
-	\begin{align*}
-		E_{W_{AB}} &= \ecinx{A} - \ecinx{B} \\
-		&= m \cdot g \cdot d \\
-		\ecin &= \frac{1}{2} \cdot m \cdot v^2 \\
-	\end{align*}
+	\textbf{Théorème de l'énergie Cynétique} \\
+	\begin{twocols}
+		\begin{align*}
+			\ew{AB} &= \ecinx{B} - \ecinx{A} \\
+			&= m \cdot g \cdot d \\
+			\ecin &= \frac{1}{2} \cdot m \cdot v^2 \\
+		\end{align*}
+	\nextcol
+		\begin{tabular}{rcl}
+			\formula{$m$}{Masse [N]} \\
+			\formula{$\ew{AB}$}{Energie cynétique [N]} \\
+		\end{tabular}
+	\end{twocols}
+
+\end{mdframed}
+\vspace{1em}
+\begin{mdframed}
+	\textbf{Théorème de l'énergie Potentielle} \\
+	\begin{twocols}
+		\begin{align*}
+			\epot &= \sum m_o \cdot g \cdot \Delta h \\
+			\epot &= -G \cdot m_p \cdot m_o \cdot \frac{1}{\Delta h} & \text{(1)} \\
+		\end{align*}
+	\nextcol
+		\begin{tabular}{rcl}
+			\formula{$m_o$}{Masse objet [Kg]} \\
+			\formula{$m_p$}{Masse planète [Kg]} \\
+			\formula{$\Delta h$}{Diff. d'altitude [m]} \\
+		\end{tabular}
+	\end{twocols}
 
 \end{mdframed}
 
-On sait pas \\
+\subsubsection*{Formules dérivées}
+
+{\bfseries Force de frottement \& décélération} \\
 \begin{twocols}[0.5][0.5]
 	\begin{align*}
-		\ecin &= x \cdot f & \text{\itshape à plat} \\
-		&= m \cdot g \cdot x \cdot f & \text{\itshape en pente} \\
+		\Delta\ecinx{AB} &= - f \cdot d_f & \text{\itshape à plat} \\
+		&= m \cdot g \cdot d - f \cdot d_f & \text{\itshape en pente} \\
 	\end{align*}
 \nextcol
 	\begin{tabular}{rcl}
-		\formula{$x$}{Distance d'arrêt [m]} \\
+		\formula{$d$}{Distance [m]} \\
+		\formula{$d_f$}{Distance d'arrêt [m]} \\
 		\formula{$f$}{Force de frottement [N]} \\
 	\end{tabular}
 \end{twocols}
+
+{\bfseries Différence de potentiel} \\
+\[
+	\Delta\epotx{AB} = \epotx{B} + \epotx{A}
+\]
+
+{\bfseries Objet en déplacement} \\
+\[
+	\Delta\ecinx{AB} = \Delta\epotx{AB} + \ew{AB}
+\]
+
+\newpage
+
+\subsection{Puissance}
+
+\begin{mdframed}
+	{\large\bfseries Théorème}
+
+	\begin{twocols}
+		\begin{align*}
+			P &= \frac{E}{T} \\
+			  &= \frac{F \cdot d}{T} \\
+			  &= F \cdot v \\[1em]
+		\end{align*}
+	\nextcol
+		\begin{tabular}{rcl}
+			\formula{$P$}{Puissance [J/s = W(atts)]} \\
+			\formula{$E$}{Energie [J]} \\
+			\formula{$T$}{Temps [s]} \\
+			\formula{$F$}{Force [N]} \\
+			\formula{$v$}{Vitesse [m/s]} \\
+		\end{tabular}
+	\end{twocols}
+\end{mdframed}
+\vspace{1em}
+\begin{mdframed}
+	{\large\bfseries Rendement}
+	\begin{align*}
+		\text{Rendement} &= \frac{E_\text{Utile}}{E_\text{Fournie}} = \frac{P_\text{Utile}}{P_\text{Fournie}} \\[1em]
+		\text{Perte} &= E_\text{Fournie} - E_\text{Utile} = P_\text{Fournie} - P_\text{Utile}
+	\end{align*}
+
+\end{mdframed}
 
 \newpage
 
@@ -675,18 +765,16 @@ On sait pas \\
 	\end{twocols}
 \end{mdframed}
 
-\nextcol
+\subsection{Formules dérivées}
 
-	\begin{tabular}{rl}
-		$Q$ & Energie [J] \\
-		$\Delta\theta$ & Diff. de temperature [C]\\
-		$m$ & Masse [kg] \\
-		$c$ & Chaleur specifique \\
-		$C$ & Coefficient de transformation
-	\end{tabular}
+{\bfseries Equilibre de temperature} \\
+Pour obtenir un équilibre de température, il faut que l'énergie cédée par les corps chauds soit absorbée par les corps froids.
+\[\sum \text{énergie cédée} = \sum \text{énergie absorbée}\]
 
+{\bfseries Source d'énergie externe} \\
+Lorsqu'un système est alimenté par une source d'énergie externe, il l'absorbe entièrement excepté les éventuelles pertes.
 
-\end{twocols}
+\[\sum E_\text{reçue} - \sum E_\text{perte} = \sum Q\]
 
 \newpage
 
