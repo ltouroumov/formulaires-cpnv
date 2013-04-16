@@ -17,15 +17,16 @@ Formulaire de Physique
   2. Graviation Universelle
   3. Mise en orbite (Todo)
 
-4. Statique (Todo)
+4. Statique
   1. Moment de Force (Todo)
   2. Rotation (Todo)
-  3. Centre de gravité (Todo)
+  3. Centre de gravité
 
 5. Energies & Puissance (Todo)
+  1. Energie mécanique
+  1. Energie Cynétique
   1. Forces de déplacement et de pesanteur (Todo)
-  2. Energie Cynéthique (Todo)
-  3. Puissances (Todo)
+  1. Puissances (Todo)
 
 6. Sonique
   1. Intensité et Décibels

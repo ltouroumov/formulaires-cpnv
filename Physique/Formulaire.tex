@@ -35,7 +35,8 @@
 \usepackage{multirow}
 \usepackage{graphicx}
 \usepackage{lipsum}
-\usepackage[linewidth=1pt]{mdframed}
+\usepackage{enumitem}
+\usepackage[linewidth=0.5pt]{mdframed}
 
 \graphicspath{ {images/} }
 \setlength{\headheight}{12mm} % Increase the size of the header to accommodate meta-information
@@ -686,16 +687,17 @@ On sait pas \\
 
 \tableofcontents
 \vspace{2em}
-\textbf{Contributeurs} \\
-\begin{itemize}
-	\item Jeremy David (sti34a 2013, \texttt{http://github.com/ltouroumov})
-	\item Kevin Wenger (sti34a 2013)
-	\item Vincent Kobel (sti34a 2013)
-\end{itemize}
-\textbf{Correcteurs} \\
-\begin{itemize}
-	\item Olivier Pittet
-\end{itemize}
+{\large\bfseries Contributeurs} \\
+\begin{description}[style=nextline]
+	\item[Jeremy David] sti34a 2013, \texttt{http://github.com/ltouroumov}, \texttt{ltouroumov@gmail.com}
+	\item[Kevin Wenger] sti34a 2013, \texttt{http://github.com/sudei}
+	\item[Timothée Moulin] sti34a 2013, \texttt{http://github.com/tehem}
+	\item[Vincent Kobel] sti34a 2013
+\end{description}
+{\large\bfseries Correcteurs} \\
+\begin{description}[style=nextline]
+	\item[Olivier Pittet] Enseignant CPNV
+\end{description}
 
 %----------------------------------------------------------------------------------------
 
