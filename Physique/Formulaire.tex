@@ -63,6 +63,13 @@
 \newcommand\textsup[1]{\ensuremath{^{\textrm{#1}}}}
 \newcommand\textsub[1]{\ensuremath{_{\textrm{#1}}}}
 
+\newcommand\frametitle[1]{ {\bfseries #1} \\[5pt] }
+\newcommand\framenote[1]{
+	{\small {\bfseries notes} \\ #1}
+}
+\newcommand\integrate[2][x]{\int #2 \,\mathrm{d}#1}
+\newcommand\integratediff[4][x]{\int_{#2}^{#3} #4 \,\mathrm{d}#1}
+
 %----------------------------------------------------------------------------------------
 %	HEADER INFORMATION
 %----------------------------------------------------------------------------------------
@@ -79,13 +86,11 @@
 
 \begin{document}
 
-\newcommand\formula[2]{#1 & = & #2}
-\newcommand\nextcol{}
 \newenvironmentx{twocols}[3][1=0.5, 2=0.4, 3=c]{
 	\def\colonewidth{#1}
 	\def\coltwowidth{#2}
 	\def\mpagealign{#3}
-	\renewcommand\nextcol{
+	\providecommand\nextcol{
 		%%\vspace{0.4em}
 		\end{minipage}
 		\vrule\quad
@@ -97,6 +102,12 @@
 }{
 	%%\vspace{0.4em}
 	\end{minipage}
+}
+\newenvironmentx{vardef}{
+	\renewcommand\item[2]{ {##1} & {##2} \\ }
+	\begin{tabular}{rl}
+}{
+	\end{tabular}
 }
 
 \AddToShipoutPicture{\BackgroundStructure} % Set the background of each page to that specified above in the header information section
