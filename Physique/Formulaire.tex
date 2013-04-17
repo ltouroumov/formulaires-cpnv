@@ -131,12 +131,12 @@ Mouvement d'un corps sur une trajéctoire réctiligne.
 	\right.
 	\]
 \nextcol
-	\begin{tabular}{rcl}
-		\formula{$v$}{Vitesse [$m/s$]} \\
-		\formula{$x$}{Position [$m$]} \\
-		\formula{$x_0$}{Position initiale [$m$]} \\
-		\formula{$t$}{Temps [$s$]} \\
-	\end{tabular}
+	\begin{vardef}
+		\item{$v$}{Vitesse [$m/s$]}
+		\item{$x$}{Position [$m$]}
+		\item{$x_0$}{Position initiale [$m$]}
+		\item{$t$}{Temps [$s$]}
+	\end{vardef}
 \end{twocols}
 \subsubsection*{Uniformément Accéléré (MRUA)}
 \begin{twocols}
@@ -150,10 +150,10 @@ Mouvement d'un corps sur une trajéctoire réctiligne.
 	\right.
 	\]
 \nextcol
-	\begin{tabular}{rcl}
-		\formula{$a$}{Accélération [$m/s^2$]} \\
-		\formula{$v_0$}{Vitesse initiale [$m/s$]} \\
-	\end{tabular}
+	\begin{vardef}
+		\item{$a$}{Accélération [$m/s^2$]}
+		\item{$v_0$}{Vitesse initiale [$m/s$]}
+	\end{vardef}
 \end{twocols}
 
 \subsection{Mouvement Circulaire}
@@ -170,12 +170,12 @@ Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 	\right.
 	\]
 \nextcol
-	\begin{tabular}{rcl}
-		\formula{$\omega$}{Vitesse angulaire [$rad/s$]} \\
-		\formula{$\theta$}{Angle [$rad$]} \\
-		\formula{$\theta_0$}{Angle initial [$rad$]} \\
-		\formula{$t$}{Temps [$s$]} \\
-	\end{tabular}
+	\begin{vardef}
+		\item{$\omega$}{Vitesse angulaire [$rad/s$]}
+		\item{$\theta$}{Angle [$rad$]}
+		\item{$\theta_0$}{Angle initial [$rad$]}
+		\item{$t$}{Temps [$s$]}
+	\end{vardef}
 \end{twocols}
 \subsubsection*{Uniformément Accéléré (MCUA)}
 \begin{twocols}
@@ -192,14 +192,14 @@ Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 	\right.
 	\]
 \nextcol
-	\begin{tabular}{rcl}
-		\formula{$r$}{Rayon [m]} \\
-		\formula{$\alpha$}{Accélération angulaire [$rad/s^2$]} \\
-		\formula{$\omega_0$}{Vitesse angulaire initiale [$rad/s$]} \\
-		\formula{$V$}{Vitesse tangantielle [$m/s$]} \\
-		\formula{$a_c$}{Accélération centripète [$m/s^2$]} \\
-		\formula{$F_c$}{Force centripète [$N$]} \\
-	\end{tabular}
+	\begin{vardef}
+		\item{$r$}{Rayon [m]}
+		\item{$\alpha$}{Accélération angulaire [$rad/s^2$]}
+		\item{$\omega_0$}{Vitesse angulaire initiale [$rad/s$]}
+		\item{$V$}{Vitesse tangantielle [$m/s$]}
+		\item{$a_c$}{Accélération centripète [$m/s^2$]}
+		\item{$F_c$}{Force centripète [$N$]}
+	\end{vardef}
 \end{twocols}
 
 \newpage
@@ -380,19 +380,19 @@ Forces de retenue et de traction \\
 	\end{figure*}
 
 \begin{mdframed}[leftmargin=2em, rightmargin=2em]
-	\textbf{Loi de la Gravitation universelle} \\ \hspace{0.5em}
+	\frametitle{Loi de la Gravitation universelle}
 	Deux corps quelconques s'attirent de manière proportionelle à leur masse et inversément proportionnelle au carré de leur distance. \\
 	\par\hspace{0.5em}
 	\begin{twocols}[0.3][0.3]
 		\[F_G = G\cdot\frac{m_1 \cdot m_2}{d^2}\]
 		\nextcol
-		\begin{tabular}{rcl}
-			\formula{$F_G$}{Force de gravitation [N]} \\
-			\formula{$G$}{Gravitation universelle} \\
-					  & & $6.67 \times 10^-11$ \\
-			\formula{$m_i$}{Masse [Kg]} \\
-			\formula{$d$}{Distance entre des corps [Km]} \\
-		\end{tabular}
+		\begin{vardef}
+			\item{$F_G$}{Force de gravitation [N]}
+			\item{$G$}{Gravitation universelle [$N/m^2/kg$]}
+					  & $6.67 \times 10^-11$ \\
+			\item{$m_i$}{Masse [Kg]}
+			\item{$d$}{Distance entre des corps [Km]}
+		\end{vardef}
 	\end{twocols}
 \end{mdframed}
 \par\hspace{1em}
@@ -449,13 +449,13 @@ Lorsque l'objet se trouve à l'équilibre, l'accélération vaut 0. La formule p
 
 	\nextcol
 
-		\begin{tabular}{rcl}
-			\formula{$M_p$}{Masse de la planète [Kg]} \\
-			\formula{$M_o$}{Masse de l'objet [Kg]} \\
-			\formula{$d$}{Distance entre les corps [km]} \\
-			\formula{$r_p$}{Rayon de la planète [km]} \\
-			\formula{$alt$}{Altitude [km]} \\
-		\end{tabular}
+		\begin{vardef}
+			\item{$M_p$}{Masse de la planète [Kg]}
+			\item{$M_o$}{Masse de l'objet [Kg]}
+			\item{$d$}{Distance entre les corps [m]}
+			\item{$r_p$}{Rayon de la planète [m]}
+			\item{$alt$}{Altitude [m]}
+		\end{vardef}
 
 	\end{twocols}
 
@@ -534,12 +534,12 @@ Lorsqu'une force est appliquée sur un corps attaché à un axe de rotation, cet
 
 	\[\sum M = 0\]
 	\nextcol
-	\begin{tabular}{rcl}
-		\formula{$M$}{Moment de force} \\
-		\formula{$F_\perp$}{Force perpendiculaire [N]} \\
-		\formula{$F$}{Force [N]} \\
-		\formula{$\alpha$}{Angle de la force [deg]} \\
-	\end{tabular}
+	\begin{vardef}
+		\item{$M$}{Moment de force}
+		\item{$F_\perp$}{Force perpendiculaire [N]}
+		\item{$F$}{Force [N]}
+		\item{$\alpha$}{Angle de la force [deg]}
+	\end{vardef}
 	\end{twocols}
 \end{mdframed}
 
@@ -562,12 +562,12 @@ Lorsqu'une force est appliquée sur un corps attaché à un axe de rotation, cet
 		  &= F \cdot \cos \beta \cdot \ell \\
 	\end{align*}
 \nextcol
-	\begin{tabular}{rcl}
-		\formula{$W$}{Travail de force [J]} \\
-		\formula{$F$}{Force [N]} \\
-		\formula{$\ell$}{Distance [m]} \\
-		\formula{$\alpha \: \beta$}{Angle [Deg]} \\
-	\end{tabular}
+	\begin{vardef}
+		\item{$W$}{Travail de force [J]}
+		\item{$F$}{Force [N]}
+		\item{$\ell$}{Distance [m]}
+		\item{$\alpha \: \beta$}{Angle [Deg]}
+	\end{vardef}
 \end{twocols}
 
 \textbf{Formules dérivées}
@@ -583,11 +583,11 @@ Tavail de force sur une pente \\
 		W &= h \cdot m \cdot g \\
 	\end{align*}
 \nextcol
-	\begin{tabular}{rcl}
-		\formula{$h$}{Dénivelé [m]} \\
-		\formula{$d$}{Distance [m]} \\
-		\formula{$m$}{Masse du corps [kg]} \\
-	\end{tabular}
+	\begin{vardef}
+		\item{$h$}{Dénivelé [m]}
+		\item{$d$}{Distance [m]}
+		\item{$m$}{Masse du corps [kg]}
+	\end{vardef}
 \end{twocols}
 
 \newpage
@@ -675,13 +675,13 @@ Tavail de force sur une pente \\
 			  &= F \cdot v \\[1em]
 		\end{align*}
 	\nextcol
-		\begin{tabular}{rcl}
-			\formula{$P$}{Puissance [J/s = W(atts)]} \\
-			\formula{$E$}{Energie [J]} \\
-			\formula{$T$}{Temps [s]} \\
-			\formula{$F$}{Force [N]} \\
-			\formula{$v$}{Vitesse [m/s]} \\
-		\end{tabular}
+		\begin{vardef}
+			\item{$P$}{Puissance [J/s = W(atts)]}
+			\item{$E$}{Energie [J]}
+			\item{$t$}{Temps [s]}
+			\item{$F$}{Force [N]}
+			\item{$v$}{Vitesse [m/s]}
+		\end{vardef}
 	\end{twocols}
 \end{mdframed}
 \vspace{1em}
@@ -704,11 +704,11 @@ Tavail de force sur une pente \\
 		\beta &= 10 \cdot \log_{10}\left(\frac{I}{I_0}\right) \\
 	\end{align*}
 \nextcol
-	\begin{tabular}{rcl}
-		\formula{$\beta$}{Décibels} \\
-		\formula{$I$}{Intensité} \\
-		\formula{$I_0$}{Seuil d'audition ($10^{-12}$)} \\
-	\end{tabular}
+	\begin{vardef}
+		\item{$\beta$}{Décibels [db]}
+		\item{$I$}{Intensité [$W/m^2$]}
+		\item{$I_0$}{Seuil d'audition ($10^{-12}$) [$W/m^2$]}
+	\end{vardef}
 \end{twocols}
 
 \subsection{Relations avec la pression}
@@ -718,13 +718,13 @@ Tavail de force sur une pente \\
 		\beta &= 20 \cdot \log_{20}\left(\frac{\Delta p}{\Delta p_0}\right) \\
 	\end{align*}
 \nextcol
-	\begin{tabular}{rcl}
-		\formula{$\Delta p$}{Amplitude (différence) de pression} \\
-		\formula{$\rho$}{Masse volumique du milieu} \\
-		\formula{$V_\text{son}$}{Vitesse du son (dans l'air: 344 [m/s])} \\
-		\formula{$\beta$}{Décibels} \\
-		\formula{$I$}{Intensité} \\
-	\end{tabular}
+	\begin{vardef}
+		\item{$\Delta p$}{Amplitude (différence) de pression [Pa]}
+		\item{$\rho$}{Masse volumique du milieu [$kg/m^3$]}
+		\item{$V_\text{son}$}{Vitesse du son (dans l'air: 344 [m/s])}
+		\item{$\beta$}{Décibels [db]}
+		\item{$I$}{Intensité [$W/m^2$]}
+	\end{vardef}
 \end{twocols}
 
 \subsubsection*{Autre formules}
@@ -734,13 +734,13 @@ Tavail de force sur une pente \\
 		\Delta\beta &= 10 \cdot \log_{10}(\Delta n)
 	\end{align*}
 \nextcol
-	\begin{tabular}{rcl}
-		\formula{$\Delta\beta$}{Diffèrence de décibels} \\
-		\formula{$\Delta n$}{Nombre de sources supplémentaires} \\
-	\end{tabular}
+	\begin{vardef}
+		\item{$\Delta\beta$}{Diffèrence de décibels}
+		\item{$\Delta n$}{Nombre de sources supplémentaires}
+	\end{vardef}
 \end{twocols}
 
-\subsection{Dispertion et Amortissement}
+\subsection{Dispersion sans amortissement}
 \begin{figure*}[h]
 	\centering
 	\includegraphics[width=0.75\textwidth]{Sonique-Dispersion}
@@ -768,13 +768,13 @@ Tavail de force sur une pente \\
 			&= m \cdot L & \text{Ch. état} \\
 		\end{align*}
 	\nextcol
-		\begin{tabular}{rcl}
-			\formula{$Q_n$}{Energie [J]} \\
-			\formula{$\Delta\theta$}{Diff. de temperature [C}]\\
-			\formula{$m$}{Masse [kg]} \\
-			\formula{$c$}{Chaleur specifique} \\
-			\formula{$L$}{Coefficient de transformation} \\
-		\end{tabular}
+		\begin{vardef}
+			\item{$Q_n$}{Energie [J]}
+			\item{$\Delta\theta$}{Diff. de temperature [°C]}
+			\item{$m$}{Masse [kg]}
+			\item{$c$}{Chaleur specifique [J/kg/°C]}
+			\item{$L$}{Chaleur latente de transformation [J/kg]}
+		\end{vardef}
 	\end{twocols}
 \end{mdframed}
 
