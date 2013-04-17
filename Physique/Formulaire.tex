@@ -255,7 +255,7 @@ Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 	\begin{equation*}
 		\left\{
 		\begin{array}{rll}
-			p &= {\displaystyle \frac{v_0\,^2 \cdot \sin (2 \cdot \alpha)}{a}} & \text{Si}\:y_0 = 0 \\[1em]
+			p &= {\displaystyle \frac{v_0\,^2 \cdot \sin (2 \cdot \alpha)}{a_y}} & \text{Si}\:y_0 = 0 \\[1em]
 			p &= \text{résoudre}\:\left\{
 					\begin{aligned}
 						y(t) &= 0 \\
@@ -272,7 +272,7 @@ Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 
 	Alt. Maximale
 	\begin{equation*}
-		y_\text{max} = \frac{(v_0\cdot\sin{\alpha})^2}{2a} + y_0
+		y_\text{max} = \frac{(v_0\cdot\sin{\alpha})^2}{2 \cdot a_y} + y_0
 	\end{equation*}
 
 	Vitesse Résultante
@@ -290,13 +290,13 @@ Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 \section{Newton}
 \subsection{Lois de Newton}
 \begin{mdframed}[leftmargin=2em, rightmargin=2em]
-	\textbf{1\textsup{ere} loi de Newton} \\ \hspace{0.5em}
+	\frametitle{1\textsup{ere} loi de Newton}
 	%% Tout corps persévère dans l'état de repos ou de mouvement uniforme en ligne droite dans lequel il se trouve, à moins que quelque force n'agisse sur lui, et ne le contraigne à changer d'état.
 	Tout corps dont la somme des forces est nulle est soit au repos, soit animé d'un mouvement rectiligne uniforme non accéléré.
 \end{mdframed}
 \par\hspace{1em}
 \begin{mdframed}[leftmargin=2em, rightmargin=2em]
-	\textbf{2\textsup{ème} loi de Newton} \\ \hspace{0.5em}
+	\frametitle{2\textsup{ème} loi de Newton}
 	%% L'altération du mouvement est proportionnelle à la force qui lui est imprimée ; et cette altération se fait en ligne droite dans la direction de la force.
 	L'altération du mouvement est proportionnelle à la force qui lui est imprimée ; et cette altération se fait en ligne droite dans la direction de la force.	
 	\begin{align*}
@@ -306,7 +306,7 @@ Mouvement d'un corps autour d'un point de rotation (trajectoire circulaire).
 \end{mdframed}
 \par\hspace{1em}
 \begin{mdframed}[leftmargin=2em, rightmargin=2em]
-	\textbf{3\textsup{ème} loi de Newton} \\ \hspace{0.5em}
+	\frametitle{3\textsup{ème} loi de Newton}
 	Pour chaque action, il existe une réaction égale et opposée.
 
 	\begin{equation*}
@@ -326,9 +326,7 @@ Tirer un objet sur une pente \\
 		\right.
 	\]
 	\par\vspace{0.5em}
-	{\small \textbf{notes} \\
-		$\alpha = \tan^{-1}(\text{pente {\tiny en \%}})$
-	}
+	\framenote{$\alpha = \tan^{-1}(\text{pente {\tiny en \%}})$}
 \end{twocols}
 \par\vspace{1em}
 Système de poulies \\
@@ -346,10 +344,9 @@ Système de poulies \\
 		R_n &= \text{Résistance sur la masse $n$} \\
 	\end{align*}
 	\par\vspace{0.2em}
-	{\small
-	\textbf{notes} \\
-	$F_n$ est nulle si l'objet n'est pas en suspension (ex $m_4$) \\
-	Les masses qui ne sont pas en suspension et qui n'exercent pas de frottent sont tout de même comptées dans la somme des masses ($\sum m_n$)
+	\framenote{
+		$F_n$ est nulle si l'objet n'est pas en suspension (ex $m_4$) \\
+		Les masses qui ne sont pas en suspension et qui n'exercent pas de frottent sont tout de même comptées dans la somme des masses ($\sum m_n$)
 	}
 
 \end{twocols}
@@ -359,14 +356,11 @@ Forces de retenue et de traction \\
 \nextcol
 
 	\begin{align*}
-		F_t - F_g &= \sum m \cdot a \\
+		F_t - F_g - F_r &= \sum m \cdot a \\
 			F_g &= \sum m \cdot g \cdot \sin \alpha
 	\end{align*}
 
-	{\small
-		\textbf{notes} \\
-		La somme des masses est dépendant du référentiel.
-	}
+	\framenote{La somme des masses est dépendant du sous-système choisi.}
 
 \end{twocols}
 
@@ -414,7 +408,12 @@ Cette loi peut être dérivée lorsqu'un objet est suffisamment proche d'un corp
 \end{figure*}
 Une autre dérivation de cette loi peut s'appliquer lorsqu'un objet est soumis à deux champs de gravité distincts. Cette dérivation permet d'obtenir la direction et la vitesse avec laquel le corps au milieu se dirige.
 
-	\[a = G \cdot \left(\frac{m_1 \cdot m_2}{d_1\,^2} - \frac{m_3 \cdot m_2}{d_2\,^2}\right)\]
+	\[\left\{
+		\begin{aligned}
+			F &= G \cdot \left(\frac{m_1 \cdot m_2}{d_1\,^2} - \frac{m_3 \cdot m_2}{d_2\,^2}\right)\\
+			F &= m_2 \cdot a\\
+		\end{aligned}
+	\right.\]
 
 \subsubsection*{Équilibre d'attraction}
 Lorsque l'objet se trouve à l'équilibre, l'accélération vaut 0. La formule peut donc être modifiée.
@@ -428,7 +427,6 @@ Lorsque l'objet se trouve à l'équilibre, l'accélération vaut 0. La formule p
 
 \subsection{Mise en orbite}
 
-\subsubsection*{Géostationnaire}
 \begin{figure*}[h]
 	\centering
 	\includegraphics[width=0.5\textwidth]{Newton-OrbiteGeostationnaire}
@@ -437,13 +435,13 @@ Lorsque l'objet se trouve à l'équilibre, l'accélération vaut 0. La formule p
 \begin{mdframed}
 	Pour qu'un objet soit en orbite géosynchrone la force de gravité doit être égale à la force centripète.
 	\[F_g = F_c\]
-
-	\[\omega = \frac{\text{Nombre de tours}}{\text{Temps [s]}}\]
+	\[\omega = \frac{\text{Angle parcouru [rad]}}{\text{Temps [s]}}\]
 
 	\textbf{Generalisation} \\
 	\begin{twocols}
 		\begin{align*}
 			G\cdot\frac{M_p\cdot M_o}{d^2} &= M_o \cdot \omega^2 \cdot d \\
+			G \cdot M_p &= \omega^2 \cdot d^3 \\
 			d &= r_p + alt \\
 		\end{align*}
 
@@ -458,21 +456,31 @@ Lorsque l'objet se trouve à l'équilibre, l'accélération vaut 0. La formule p
 		\end{vardef}
 
 	\end{twocols}
-
+	\\ \framenote{$\omega$ est equivalent a celui de la planète en orbite dans le cas d'une orbite géosynchrone}
 \end{mdframed}
 
 \vspace{1em}
 
 \begin{mdframed}
-	\textbf{Nombre de passages au dessus d'un point pour une période donnée} \\
+	\frametitle{Nombre de passages au dessus d'un point pour une période donnée}
 
 	\begin{twocols}
 		\begin{align*}
-		n &= \frac{\omega_o}{\omega_p} \\
-	\end{align*}
+			%%\omega_p \cdot n &= \omega_o \\[1em]
+			\omega_0 &= \frac{2 \pi \cdot (n \pm 1)}{t} \\
+			&= \omega_p \cdot (n \pm 1) & \text{(1)} \\
+		\end{align*}
 	\nextcol
+		\begin{vardef}
+			\item{$\omega_o$}{Vitsees angulaire de l'objet [rad/s]}
+			\item{$\omega_p$}{$\omega$ de la planète [rad/s]}
+			\item{$n$}{Nombre de tours}
+			\item{$t$}{Temps [s]}
+		\end{vardef}
+		\\[1em]
 		Sens identiques: $n+1$ \\
-		Sens contraires: $n-1$
+		Sens contraires: $n-1$ \\
+		\framenote{(1) Passage sur un point}
 	\end{twocols}
 \end{mdframed}
 
@@ -486,41 +494,14 @@ La statique est l'étude des forces sur un système à l'équilibre, la somme de
 
 Les forces sont considérées comme des vecteurs est s'additionnenet donc comme tels.
 
-\subsection{Centre de gravité}
-
-\newcommand\fcount[1]{\text{nombre de}\left(#1\right)}
-
-\begin{figure*}[h]
-	\centering
-	\includegraphics{Statique-CentreGravite}
-\end{figure*}
-
-\begin{twocols}[0.5][0.5]
-	\begin{align*}
-		m &= S \cdot d & \text{(1)} \\[1em]
-		p &= \sum m \\[1em]
-		G_x &= \frac{\sum\left(m_n \cdot x_n\right)}{p} \\[1em]
-		G_y &= \frac{\sum\left(m_n \cdot y_n\right)}{p} \\
-	\end{align*}
-\nextcol
-	\begin{tabular}{rcl}
-		\formula{$m$}{Masse [Kg]} \\
-		\formula{$S$}{Surface [$m^2$]} \\
-		\formula{$d$}{Densité [$Kg/m^2$]} \\
-		\formula{$p$}{Masse du système [Kg]} \\
-		\formula{$G_x\;\text{et}\;G_y$}{Coordonnée du centre de gravité [m]} \\
-	\end{tabular}
-	\par\vspace{0.5em}
-	{\small \textbf{notes} \\
-		(1) Le calcul $m = S \cdot d$ n'est pas applicable dans toutes les situations.
-	}
-\end{twocols}
-
-\newpage
-
 \subsection{Moment de Force}
 Lorsqu'une force est appliquée sur un corps attaché à un axe de rotation, cette force produit un moment de force dont l'effet est propotionnel à la distance par rapport au centre de rotation et est mitigé par l'angle en fonction du corps.
 \par\hspace{1em}
+
+\begin{figure*}[h]
+	\centering
+	\includegraphics{Statique-Moments}
+\end{figure*}
 \begin{mdframed}[leftmargin=2em, rightmargin=2em]
 	\begin{twocols}[0.5][0.5]
 	\[
@@ -542,6 +523,63 @@ Lorsqu'une force est appliquée sur un corps attaché à un axe de rotation, cet
 	\end{vardef}
 	\end{twocols}
 \end{mdframed}
+
+\newpage
+
+\subsection{Système de forces}
+
+\begin{figure*}[h]
+	\centering
+	\includegraphics{Statique-Axes}
+\end{figure*}
+
+\begin{mdframed}
+	\frametitle{Equilibre}
+	\begin{twocols}
+		\[\left\{
+		\begin{aligned}
+			R_x &= \sum F_n \cdot \cos \alpha_n \\
+			R_y &= \sum F_n \cdot \sin \alpha_n \\
+		\end{aligned}
+	\right.\]
+	\nextcol
+		\begin{vardef}
+			\item{$R$}{Force résultante}
+			\item{$F_n$}{Force en jeu}
+		\end{vardef}
+	\end{twocols}
+	
+\end{mdframed}
+
+\newpage
+
+\subsection{Centre de gravité}
+
+\newcommand\fcount[1]{\text{nombre de}\left(#1\right)}
+
+\begin{figure*}[h]
+	\centering
+	\includegraphics{Statique-CentreGravite}
+\end{figure*}
+
+\begin{twocols}[0.4][0.6]
+	\begin{align*}
+		m &= S \cdot d & \text{(1)} \\[1em]
+		p &= \sum m \\[1em]
+		G_x &= \frac{\sum\left(m_n \cdot x_n\right)}{p} \\[1em]
+		G_y &= \frac{\sum\left(m_n \cdot y_n\right)}{p} \\
+	\end{align*}
+\nextcol
+	\begin{vardef}
+		\item{$m$}{Masse [Kg]}
+		\item{$S$}{Surface [$m^2$]}
+		\item{$d$}{Masse superficique [$Kg/m^2$]}
+		\item{$p$}{Masse du système [Kg]}
+		\item{$G_x\;\text{et}\;G_y$}{Coordonnée du centre de gravité [m]}
+	\end{vardef}
+	\par\vspace{0.5em}
+	\framenote{(1) Le calcul $m = S \cdot d$ n'est pas applicable dans toutes les situations.}
+\end{twocols}
 
 \newpage
 
@@ -599,79 +637,88 @@ Tavail de force sur une pente \\
 \newcommand\ecinx[1]{\ex{\text{cin}_{#1}}}
 \newcommand\epot{\ex{\text{pot}}}
 \newcommand\epotx[1]{\ex{\text{pot}_{#1}}}
-\newcommand\ew[1]{\ex{W_{#1}}}
+\newcommand\sumw[1]{\sum W_{#1}}
 
 \begin{mdframed}
-	\textbf{Théorème de l'énergie Cynétique} \\
-	\begin{twocols}
+	\frametitle{Théorème de l'énergie Cynétique}
+	\begin{twocols}[0.4][0.6]
 		\begin{align*}
-			\ew{AB} &= \ecinx{B} - \ecinx{A} \\
-			&= m \cdot g \cdot d \\
-			\ecin &= \frac{1}{2} \cdot m \cdot v^2 \\
+			\ecinx{T} &= \frac{1}{2} \cdot m \cdot v^2 \\
+			\sumw{AB} &= \ecinx{B} - \ecinx{A} \\
 		\end{align*}
 	\nextcol
-		\begin{tabular}{rcl}
-			\formula{$m$}{Masse [N]} \\
-			\formula{$\ew{AB}$}{Energie cynétique [N]} \\
-		\end{tabular}
+		\begin{vardef}
+			\item{$\ecinx{T}$}{Energie cinetique de translation [J]}
+			\item{$m$}{Masse [N]}
+			\item{$\sumw{AB}$}{Energie cynétique [N]}
+		\end{vardef}
 	\end{twocols}
 
 \end{mdframed}
 \vspace{1em}
 \begin{mdframed}
-	\textbf{Théorème de l'énergie Potentielle} \\
-	\begin{twocols}
+	\frametitle{Energie Potentielle}
+	\begin{twocols}[0.4][0.6]
 		\begin{align*}
-			\epot &= \sum m_o \cdot g \cdot \Delta h \\
-			\epot &= -G \cdot m_p \cdot m_o \cdot \frac{1}{\Delta h} & \text{(1)} \\
+			\epotx{G} &= m_o \cdot g \cdot h \\
+			\epotx{G} &= -G \cdot m_p \cdot m_o \cdot \frac{1}{\Delta h} & \text{(1)} \\
 		\end{align*}
 	\nextcol
-		\begin{tabular}{rcl}
-			\formula{$m_o$}{Masse objet [Kg]} \\
-			\formula{$m_p$}{Masse planète [Kg]} \\
-			\formula{$\Delta h$}{Diff. d'altitude [m]} \\
-		\end{tabular}
+		\begin{vardef}
+			\item{$\epotx{G}$}{Energie potentielle de gravitation [J]}
+			\item{$m_o$}{Masse objet [Kg]}
+			\item{$m_p$}{Masse planète [Kg]}
+			\item{$\Delta h$}{Diff. d'altitude [m]}
+		\end{vardef}
+
+		\framenote{(1) voir: Intégrations}
+
 	\end{twocols}
 
 \end{mdframed}
 
-\subsubsection*{Formules dérivées}
+%% Formule WTF
+%% \frametitle{Force de frottement \& décélération} \\
+%% \begin{twocols}[0.5][0.5]
+%% 	\begin{align*}
+%% 		\Delta\ecinx{AB} &= - f \cdot d_f & \text{\itshape à plat} \\
+%% 		&= m \cdot g \cdot d - f \cdot d_f & \text{\itshape en pente} \\
+%% 	\end{align*}
+%% \nextcol
+%% 	\begin{vardef}
+%% 		\item{$d$}{Distance [m]}
+%% 		\item{$d_f$}{Distance d'arrêt [m]}
+%% 		\item{$f$}{Force de frottement [N]}
+%% 	\end{vardef}
+%% \end{twocols}
+\vspace{1em}
+\frametitle{Différence de potentiel} \\
+\[\Delta\epotx{AB} = \epotx{B} + \epotx{A}\]
 
-{\bfseries Force de frottement \& décélération} \\
-\begin{twocols}[0.5][0.5]
-	\begin{align*}
-		\Delta\ecinx{AB} &= - f \cdot d_f & \text{\itshape à plat} \\
-		&= m \cdot g \cdot d - f \cdot d_f & \text{\itshape en pente} \\
-	\end{align*}
-\nextcol
-	\begin{tabular}{rcl}
-		\formula{$d$}{Distance [m]} \\
-		\formula{$d_f$}{Distance d'arrêt [m]} \\
-		\formula{$f$}{Force de frottement [N]} \\
-	\end{tabular}
-\end{twocols}
-
-{\bfseries Différence de potentiel} \\
-\[
-	\Delta\epotx{AB} = \epotx{B} + \epotx{A}
-\]
-
-{\bfseries Objet en déplacement} \\
-\[
-	\Delta\ecinx{AB} = \Delta\epotx{AB} + \ew{AB}
-\]
+%% Formule WTF
+%% \frametitle{Objet en déplacement} \\
+%% \[
+%% 	\Delta\ecinx{AB} = \Delta\epotx{AB} + \ew{AB}
+%% \]
+\vspace{1em}
+\frametitle{Intégrations}
+\begin{align*}
+	F(h) &= G \cdot \frac{m_p \cdot m_o}{h^2} \\
+	\epotx{G} &= \integrate[h]{F(h)} \\
+	\Delta\epotx{AB} &= \integratediff[h]{A}{B}{F(h)} \\
+\end{align*}
 
 \newpage
 
 \subsection{Puissance}
 
 \begin{mdframed}
-	{\large\bfseries Théorème}
+	\frametitle{Théorème}
 
 	\begin{twocols}
 		\begin{align*}
-			P &= \frac{E}{T} \\
-			  &= \frac{F \cdot d}{T} \\
+			P &= \frac{E}{t} \\
+			  &= \frac{F \cdot d}{t} \\
 			  &= F \cdot v \\[1em]
 		\end{align*}
 	\nextcol
@@ -686,10 +733,11 @@ Tavail de force sur une pente \\
 \end{mdframed}
 \vspace{1em}
 \begin{mdframed}
-	{\large\bfseries Rendement}
+	\frametitle{Rendement}
 	\begin{align*}
 		\text{Rendement} &= \frac{E_\text{Utile}}{E_\text{Fournie}} = \frac{P_\text{Utile}}{P_\text{Fournie}} \\[1em]
-		\text{Perte} &= E_\text{Fournie} - E_\text{Utile} = P_\text{Fournie} - P_\text{Utile}
+		\text{Perte} &= E_\text{Fournie} - E_\text{Utile} \\
+		&= P_\text{Fournie} - P_\text{Utile} \\
 	\end{align*}
 
 \end{mdframed}
@@ -749,18 +797,21 @@ Tavail de force sur une pente \\
 \begin{twocols}[0.5][0.5]
 	\begin{align*}
 		I_1 \cdot S_1 &= I_2 \cdot S_2 \\
-		I_1 \cdot r_1^2 &= I_2 \cdot r_2^2	\\
-	\end{align*}
-\nextcol
-	\begin{align*}
+		I_1 \cdot {r_1}^2 &= I_2 \cdot {r_2}^2	\\[1em]
 		\frac{I_2}{I_1} &= \frac{S_1}{S_2} \\
 		\frac{I_2}{I_1} &= \left(\frac{r_1}{r_2}\right)^2 \\
 	\end{align*}
+\nextcol
+	\begin{vardef}
+		\item{$I_n$}{Intensité [$W/m^2$]}
+		\item{$S_s$}{Surface de dispersion [$m^2$]}
+		\item{$r_n$}{Rayon de dispersion [m]}
+	\end{vardef}
 \end{twocols}
 \section{Transfert de chaleur}
 
 \begin{mdframed}
-	{\large\bfseries Théorème} \\
+	\frametitle{Théorème}
 	\begin{twocols}
 		\begin{align*}
 			\sum Q &= 0 \\[1em]
@@ -780,20 +831,28 @@ Tavail de force sur une pente \\
 
 \subsection{Formules dérivées}
 
-{\bfseries Equilibre de temperature} \\
+\frametitle{Equilibre de temperature}
 Pour obtenir un équilibre de température, il faut que l'énergie cédée par les corps chauds soit absorbée par les corps froids.
 \[\sum \text{énergie cédée} = \sum \text{énergie absorbée}\]
 
-{\bfseries Source d'énergie externe} \\
+\frametitle{Source d'énergie externe}
 Lorsqu'un système est alimenté par une source d'énergie externe, il l'absorbe entièrement excepté les éventuelles pertes.
-
 \[\sum E_\text{reçue} - \sum E_\text{perte} = \sum Q\]
+
+\frametitle{Développement}
+\begin{vardef}
+	\item{$T_1$}{Température initiale [°C]}
+	\item{$T_2$}{Température finale [°C]}
+\end{vardef}
+\begin{align*}
+	\Delta Q &= m \cdot (c_\text{glace} \cdot (0-\theta_1) + L_\text{fusion} + c_\text{eau} \cdot (\theta_2 - 0))
+\end{align*}
 
 \newpage
 
 \tableofcontents
 \vspace{2em}
-{\large\bfseries Contributeurs} \\
+\frametitle{\large Contributeurs} \\
 \begin{description}[style=nextline]
 	\item[Jeremy David] sti34a 2013, \texttt{http://github.com/ltouroumov}, \texttt{ltouroumov@gmail.com}
 	\item[Kevin Wenger] sti34a 2013, \texttt{http://github.com/sudei}
